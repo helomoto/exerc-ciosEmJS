@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #buttons {
+            margin-top: 20px;
+        }
+        #buttons button {
+            width: 100px;
+            padding: 10px;
+            background-color: rgb(19, 216, 68);
+            color: white;
+            outline: none;
+        }
+        #buttons button + button {
+            background-color: rgb(220, 33, 20);
+        }
+    </style>
+</head>
+<body>
+    
+    <input type="text" name="" id="texto">
+    <div id="buttons">
+        <button id="save">SALVAR</button>
+        <button id="delete">EXCLUIR</button>
+    </div>
+    <div>
+        <ul id="lista">
+
+        </ul>
+    </div>
+
+    <script>
+        const save = document.querySelector("#save")
+        const delet = document.querySelector("#delete")
+        array = []
+
+        save.addEventListener("click", () => {
+            const texto = document.querySelector("#texto")
+            array.push(texto.value.toUpperCase())
+            console.log(array)
+            document.querySelector("#lista")
+            .innerHTML = ""
+            for(item of array) {   
+                document.querySelector("#lista")
+                .innerHTML += `<li><h1>${item}</h1></li>`
+            }
+            texto.value = ""
+        })
+
+        delet.addEventListener("click", () => {
+            const texto = document.querySelector("#texto")
+            const index = array.indexOf(`${texto.value.toUpperCase()}`)
+            array.splice(index, 1)
+            console.log(array)
+            document.querySelector("#lista")
+            .innerHTML = ""
+            for(item of array) {   
+                document.querySelector("#lista")
+                .innerHTML += `<li><h1>${item}</h1></li>`
+            }
+
+            texto.value = ""
+        })
+
+        
+       
+
+
+    </script>
+</body>
+</html>

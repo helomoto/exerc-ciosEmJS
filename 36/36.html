@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let date = new Date()
+        let dateObj = {
+            dia: date.getDate(),
+            mes: date.getMonth(),
+            ano: date.getFullYear()
+        }
+
+        let nextMonth = dateObj.mes + 2
+
+        console.log(date)
+        console.log(dateObj)
+        console.log(`${dateObj.dia}/${dateObj.mes + 1}/${dateObj.ano}`)
+        console.log(`O próximo mês é ${nextMonth}`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const str1 = "Dota é melhor que LOL"
+        const str2 = "Lol é melhor que CS"
+        const str3 = "Prefiro jogar dota"
+
+        function checkDota(str) {
+            if (str.indexOf("dota") >= 0 || str.indexOf("Dota") >= 0) {
+                console.log("verdadeiro")
+            } else if (str.indexOf("dota") == -1 || str.indexOf("Dota") == -1) {
+                console.log("falso")
+            }
+        }
+
+        checkDota(str2)
+    </script>
+</body>
+</html>

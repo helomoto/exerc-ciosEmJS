@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" name="number" id="number" placeholder="Digite um número">
+    <button id="btn">TESTE SUA SORTE</button>
+
+    <div id="div">
+
+    </div>
+
+    <script>
+        const btn = document.querySelector("#btn")
+
+        btn.addEventListener("click", () => {
+            let n = document.querySelector("#number")
+            let random = Math.floor(Math.random() * 100)
+            if (n.value == random) {
+                document.querySelector("#div").innerHTML = `<h1>Você acertou, o número que pensei era ${random}</h1>`
+            } else {
+                document.querySelector("#div").innerHTML = `<h1>Você errou, o número que pensei era ${random}</h1>`
+            }
+            n.value = ""
+        })
+    </script>
+</body>
+</html>

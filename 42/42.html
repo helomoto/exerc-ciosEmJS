@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: black;
+        }
+        img {
+            position: fixed;
+            width: 100px;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="" alt="" id="urso-img">
+
+    </div>
+   
+
+
+    <script>
+        let animacaoFrame = 0
+
+        const animacaoUrso = [
+        "https://raw.githubusercontent.com/gabrieldarezzo/helpjs-ravi/master/images/chara-1.png",
+        "https://raw.githubusercontent.com/gabrieldarezzo/helpjs-ravi/master/images/chara-2.png",
+        "https://raw.githubusercontent.com/gabrieldarezzo/helpjs-ravi/master/images/chara-3.png"
+        ]
+
+        const larguraDaTela = window.screen.availWidth
+        let position = 0
+        
+        setInterval( () => {
+            document.querySelector("img").src = animacaoUrso[animacaoFrame]
+            animacaoFrame++
+            if(animacaoFrame > 2){
+                animacaoFrame = 0
+            }
+
+            document.querySelector("img").style = `left: ${position}px;`
+            position += 4
+            if (position >= larguraDaTela/4 ) {
+                position = 0
+            }
+        }, 100)
+        
+    console.log(larguraDaTela)
+
+    </script>
+</body>
+</html>

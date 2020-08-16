@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="text">
+
+    </div>
+
+    <button id="btn">Clique Aqui</button>
+    
+    <script>
+        document.querySelector("#btn")
+        .addEventListener("click", () => {
+            document.querySelector("#text")
+            .innerHTML = "<h1>Este texto foi inserido pelo javascript</h1>"
+        })
+    </script>
+</body>
+</html>

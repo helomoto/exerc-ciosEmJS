@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        #container {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #tempo {
+            width: 130px;
+            height: 130px;
+            border: 8px solid white;
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <div id="tempo">
+
+        </div>
+    </div>
+   
+
+
+    <script>
+        
+        let n = 0
+        setInterval( () => {
+            document.querySelector("#tempo")
+            .innerHTML = `<h1>${n}</h1>`
+            n++
+            if (n > 10) {
+                n = 0
+            }
+        }, 1000 )
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        #quadrado {
+            width: 400px;
+            height: 400px;
+            background: #000;
+        }
+        #div-btn button {
+            display: block;
+            margin: 32px;
+            padding: 15px;
+            width: 150px;
+            border: none;
+            background-color: rgb(250, 25, 25);
+            color: white;
+            border-radius: 10px;
+            transition: 250ms;
+            outline: none;
+        }
+        #div-btn button:hover {
+            background-color: rgb(209, 9, 9);
+        }
+        #div-btn button:first-child {
+            background-color: rgb(11, 236, 60);
+            color: white;
+        }
+        #div-btn button:first-child:hover {
+            background-color: rgb(42, 134, 5);
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="quadrado"></div>
+
+    <div id="div-btn">
+        <button id="btn-green">VERDE</button>
+        <button id="btn-red">VERMELHO</button>
+    </div>
+
+    <script src="12a.js"></script>
+</body>
+</html>

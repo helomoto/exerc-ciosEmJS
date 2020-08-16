@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #tabuadas {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 15px;
+        }
+        #tabuadas div {
+            background-color: rgba(171, 107, 231, 0.562);
+            border-radius: 10px;
+            width: 100px;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="tabuadas">
+
+    </div>
+
+    <script>
+        let tabu = document.querySelector("#tabuadas")
+        for(let i = 0; i <= 19; i++){
+            tabu.innerHTML += `<div id="tabuada${i}"></div>`
+            for(let w = 0; w <= 10; w++){
+                let tabuada = document.querySelector(`#tabuada${i}`)
+                tabuada.innerHTML += `<br>${i} x ${w} = ` + i * w
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" name="texto" id="texto">
+    <button id="btn">SALVAR</button>
+
+    <div id="div">
+        <ul id="ul">
+
+        </ul>
+    </div>
+
+    <script>
+       const campo = document.querySelector("#texto")
+       const btn = document.querySelector("#btn")
+       const div = document.querySelector("#ul")
+       const array = []
+
+       btn.addEventListener("click", () => {
+           if(campo.value == ""){
+               return campo.placeholder = "Digita alguma coisa"
+           }
+           if(campo.value % 2 == 0) {
+            array.push(campo.value)
+            div.innerHTML += `<li><h2>${campo.value} - Este número é par</h2></li>`
+            campo.value = ""
+            return console.log(array)
+        }
+           div.innerHTML += `<li><h2>${campo.value}</h2></li>`
+           array.push(campo.value)
+           console.log(array)
+           campo.value = ""
+       })
+
+       
+    
+    </script>
+</body>
+</html>
